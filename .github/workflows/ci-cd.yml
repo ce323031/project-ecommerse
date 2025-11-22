@@ -22,14 +22,17 @@ jobs:
 
       # 3️⃣ Install dependencies
       - name: Install dependencies
+        working-directory: ./user-service
         run: npm install
 
       # 4️⃣ Run tests
       - name: Run Tests
+        working-directory: ./user-service
         run: npm test
 
       # 5️⃣ Lint code
       - name: Lint code
+        working-directory: ./user-service
         run: npm run lint
 
       # 6️⃣ Login Docker Hub
